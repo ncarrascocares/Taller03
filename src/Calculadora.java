@@ -38,8 +38,7 @@ public class Calculadora extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 0, 204));
-        setFocusableWindowState(false);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("Numero 1");
 
@@ -63,6 +62,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btn_div.setText("/");
+        btn_div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_divActionPerformed(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 0));
         jLabel3.setForeground(new java.awt.Color(0, 204, 255));
@@ -160,6 +164,27 @@ public class Calculadora extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btn_multiActionPerformed
+
+    private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
+        String n1, n2;
+       float nota_1, nota_2, resul;
+        
+        //primer numero
+        n1 = this.nota1_txt.getText();
+        //segundo numero
+        n2 = this.nota2_txt.getText();
+        
+        //convertimos los valores
+        nota_1 = Float.parseFloat(n1);
+        nota_2 = Float.parseFloat(n2);
+        
+        //Calculo de los numeros
+        resul = nota_1/nota_2;
+        
+        String texto = "El resultado es : " + resul;
+        //Enviando mensaje al área de texto
+        this.area_txt.setText(texto);
+    }//GEN-LAST:event_btn_divActionPerformed
 
     /**
      * @param args the command line arguments
