@@ -53,6 +53,11 @@ public class Calculadora extends javax.swing.JFrame {
         btn_sum.setText("+");
 
         btn_res.setText("-");
+        btn_res.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_resActionPerformed(evt);
+            }
+        });
 
         btn_multi.setText("*");
         btn_multi.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +148,7 @@ public class Calculadora extends javax.swing.JFrame {
         //ENVIO DE PARAMETROS A LA OPCION DE MULTIPLICAR
         //Declaración de los parametros
        String n1, n2;
-       float nota_1, nota_2, resul;
+       int nota_1, nota_2, resul;
         
         //primer numero
         n1 = this.nota1_txt.getText();
@@ -151,8 +156,8 @@ public class Calculadora extends javax.swing.JFrame {
         n2 = this.nota2_txt.getText();
         
         //convertimos los valores
-        nota_1 = Float.parseFloat(n1);
-        nota_2 = Float.parseFloat(n2);
+        nota_1 = Integer.parseInt(n1);
+        nota_2 = Integer.parseInt(n2);
         
         //Calculo de los numeros
         resul = nota_1*nota_2;
@@ -167,7 +172,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
         String n1, n2;
-       float nota_1, nota_2, resul;
+        int nota_1, nota_2, resul;
         
         //primer numero
         n1 = this.nota1_txt.getText();
@@ -175,8 +180,8 @@ public class Calculadora extends javax.swing.JFrame {
         n2 = this.nota2_txt.getText();
         
         //convertimos los valores
-        nota_1 = Float.parseFloat(n1);
-        nota_2 = Float.parseFloat(n2);
+        nota_1 = Integer.parseInt(n1);
+        nota_2 = Integer.parseInt(n2);
         
         //Calculo de los numeros
         resul = nota_1/nota_2;
@@ -185,6 +190,29 @@ public class Calculadora extends javax.swing.JFrame {
         //Enviando mensaje al área de texto
         this.area_txt.setText(texto);
     }//GEN-LAST:event_btn_divActionPerformed
+
+    private void btn_resActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resActionPerformed
+        
+        String n1, n2;
+        int nota_1, nota_2, resul;
+        
+        //primer numero
+        n1 = this.nota1_txt.getText();
+        //segundo numero
+        n2 = this.nota2_txt.getText();
+        
+        //convertimos los valores
+        nota_1 = Integer.parseInt(n1);
+        nota_2 = Integer.parseInt(n2);
+        
+        //Calculo de los numeros
+        resul = nota_1/nota_2;
+        
+        String texto = "El resultado es : " + resul;
+        //Enviando mensaje al área de texto
+        this.area_txt.setText(texto);
+        
+    }//GEN-LAST:event_btn_resActionPerformed
 
     /**
      * @param args the command line arguments
