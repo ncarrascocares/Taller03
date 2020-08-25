@@ -30,10 +30,10 @@ public class Calculadora extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nota1_txt = new javax.swing.JTextField();
         nota2_txt = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btn_sum = new javax.swing.JButton();
+        btn_res = new javax.swing.JButton();
+        btn_multi = new javax.swing.JButton();
+        btn_div = new javax.swing.JButton();
         area_txt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
@@ -51,18 +51,18 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("+");
+        btn_sum.setText("+");
 
-        jButton2.setText("-");
+        btn_res.setText("-");
 
-        jButton3.setText("*");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_multi.setText("*");
+        btn_multi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_multiActionPerformed(evt);
             }
         });
 
-        jButton4.setText("/");
+        btn_div.setText("/");
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 0));
         jLabel3.setForeground(new java.awt.Color(0, 204, 255));
@@ -92,13 +92,13 @@ public class Calculadora extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(area_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_multi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_div, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btn_res, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btn_sum, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(103, 103, 103)
                         .addComponent(jLabel3)))
@@ -119,10 +119,10 @@ public class Calculadora extends javax.swing.JFrame {
                     .addComponent(nota2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btn_multi)
+                    .addComponent(btn_div)
+                    .addComponent(btn_res)
+                    .addComponent(btn_sum))
                 .addGap(34, 34, 34)
                 .addComponent(area_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(78, Short.MAX_VALUE))
@@ -132,12 +132,12 @@ public class Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nota1_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nota1_txtActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nota1_txtActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-            //
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btn_multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_multiActionPerformed
+        //ENVIO DE PARAMETROS A LA OPCION DE MULTIPLICAR            //
+    }//GEN-LAST:event_btn_multiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,10 +176,10 @@ public class Calculadora extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField area_txt;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btn_div;
+    private javax.swing.JButton btn_multi;
+    private javax.swing.JButton btn_res;
+    private javax.swing.JButton btn_sum;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
