@@ -51,6 +51,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         btn_sum.setText("+");
+        btn_sum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_sumActionPerformed(evt);
+            }
+        });
 
         btn_res.setText("-");
         btn_res.addActionListener(new java.awt.event.ActionListener() {
@@ -206,13 +211,35 @@ public class Calculadora extends javax.swing.JFrame {
         nota_2 = Integer.parseInt(n2);
         
         //Calculo de los numeros
-        resul = nota_1/nota_2;
+        resul = nota_1-nota_2;
         
         String texto = "El resultado es : " + resul;
         //Enviando mensaje al área de texto
         this.area_txt.setText(texto);
         
     }//GEN-LAST:event_btn_resActionPerformed
+
+    private void btn_sumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sumActionPerformed
+        
+        String n1, n2;
+        int nota_1, nota_2, resul;
+        
+        //primer numero
+        n1 = this.nota1_txt.getText();
+        //segundo numero
+        n2 = this.nota2_txt.getText();
+        
+        //convertimos los valores
+        nota_1 = Integer.parseInt(n1);
+        nota_2 = Integer.parseInt(n2);
+        
+        //Calculo de los numeros
+        resul = nota_1+nota_2;
+        
+        String texto = "El resultado es : " + resul;
+        //Enviando mensaje al área de texto
+        this.area_txt.setText(texto);
+    }//GEN-LAST:event_btn_sumActionPerformed
 
     /**
      * @param args the command line arguments
