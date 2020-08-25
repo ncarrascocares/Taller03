@@ -36,6 +36,7 @@ public class Calculadora extends javax.swing.JFrame {
         btn_div = new javax.swing.JButton();
         area_txt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        btn_limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -84,6 +85,13 @@ public class Calculadora extends javax.swing.JFrame {
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jLabel3.setFocusTraversalPolicyProvider(true);
 
+        btn_limpiar.setText("Limpiar");
+        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_limpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,7 +123,10 @@ public class Calculadora extends javax.swing.JFrame {
                         .addComponent(btn_sum, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(103, 103, 103)
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(btn_limpiar)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -137,9 +148,11 @@ public class Calculadora extends javax.swing.JFrame {
                     .addComponent(btn_div)
                     .addComponent(btn_res)
                     .addComponent(btn_sum))
-                .addGap(34, 34, 34)
+                .addGap(56, 56, 56)
                 .addComponent(area_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btn_limpiar)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -241,6 +254,13 @@ public class Calculadora extends javax.swing.JFrame {
         this.area_txt.setText(texto);
     }//GEN-LAST:event_btn_sumActionPerformed
 
+    private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
+        //Opcion de borrado al presionar el boton limpiar
+        nota1_txt.setText("");
+        nota2_txt.setText("");
+        
+    }//GEN-LAST:event_btn_limpiarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -279,6 +299,7 @@ public class Calculadora extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField area_txt;
     private javax.swing.JButton btn_div;
+    private javax.swing.JButton btn_limpiar;
     private javax.swing.JButton btn_multi;
     private javax.swing.JButton btn_res;
     private javax.swing.JButton btn_sum;
