@@ -190,7 +190,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void btn_divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_divActionPerformed
         String n1, n2;
-        int nota_1, nota_2, resul;
+        float nota_1, nota_2, resul;
         
         //primer numero
         n1 = this.nota1_txt.getText();
@@ -198,8 +198,8 @@ public class Calculadora extends javax.swing.JFrame {
         n2 = this.nota2_txt.getText();
         
         //convertimos los valores
-        nota_1 = Integer.parseInt(n1);
-        nota_2 = Integer.parseInt(n2);
+        nota_1 = Float.parseFloat(n1);
+        nota_2 = Float.parseFloat(n2);
         
         //Calculo de los numeros
         resul = nota_1/nota_2;
@@ -258,7 +258,7 @@ public class Calculadora extends javax.swing.JFrame {
         //Opcion de borrado al presionar el boton limpiar
         nota1_txt.setText("");
         nota2_txt.setText("");
-        
+        area_txt.setText("");
     }//GEN-LAST:event_btn_limpiarActionPerformed
 
     /**
